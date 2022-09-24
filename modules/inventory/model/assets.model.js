@@ -1,0 +1,41 @@
+import { DataTypes } from "sequelize";
+import connection from "../../../utility/connection.js";
+
+const assets = connection.define("Assets", {
+  name: DataTypes.STRING,
+  description: DataTypes.STRING,
+  parentId: DataTypes.INTEGER,
+  acCapicity: DataTypes.INTEGER,
+  moduleQuantity: DataTypes.INTEGER,
+  dcCapicity: DataTypes.INTEGER,
+  categoryId: DataTypes.INTEGER,
+  typeId: DataTypes.INTEGER,
+  statusId: DataTypes.INTEGER,
+  blockId: DataTypes.INTEGER,
+  customerId: DataTypes.INTEGER,
+  ownerId: DataTypes.INTEGER,
+  operatorId: DataTypes.INTEGER,
+  manufacturerId: DataTypes.INTEGER,
+  supplierId: DataTypes.INTEGER,
+  serialNo: DataTypes.INTEGER,
+  warrantyId: DataTypes.INTEGER,
+  status: DataTypes.INTEGER,
+  photoId: DataTypes.INTEGER,
+  cost: DataTypes.DOUBLE,
+  currency: DataTypes.STRING,
+  stockCount: DataTypes.INTEGER,
+  specialTool: DataTypes.INTEGER,
+  specialToolEmpId: DataTypes.INTEGER,
+  firstDueDate: DataTypes.DATE,
+  descriptionMaintenance: DataTypes.STRING,
+  calibrationFrequency: DataTypes.INTEGER,
+  calibrationReminderDays: DataTypes.INTEGER,
+  retirementStatus: DataTypes.INTEGER,
+  multiplier: DataTypes.INTEGER,
+  createdAt: DataTypes.DATE,
+  createdBy: DataTypes.INTEGER,
+  updatedAt: DataTypes.DATE,
+  updatedBy: DataTypes.INTEGER,
+});
+
+export default assets;
